@@ -223,7 +223,6 @@ var RawInputState = function (frameDelay = config.render.frameDelay) {
   scope.frameDelay = Math.round(frameDelay);
 
   var moveForward = false; var moveBackward = false; var moveLeft = false; var moveRight = false;
-  var run = false;
 
   scope.update = function ( dt ) {
     scope.perFrameEventQueue.push(scope.frameEvents)
