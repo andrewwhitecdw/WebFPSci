@@ -26,7 +26,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 // Frame timing information
 const numFrameTimes = 100;        // Number of frame times to store
-var frameTimeValid = false;       // Has the frame time converged?
 var frameTimes = [];              // Recent frame times
 
 // Configuration
