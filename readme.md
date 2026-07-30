@@ -1,4 +1,4 @@
-# Javscript FPSci
+# JavaScript FPSci
 This documentation supports the "FPSci in a broswer" approach developed in this project.
 
 ## Current Support
