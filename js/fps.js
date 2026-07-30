@@ -245,6 +245,9 @@ var RawInputState = function (frameDelay = config.render.frameDelay) {
     return scope.perFrameEventQueue.shift();
   };
 
+  // Expose for testing
+  scope._getQueueLength = function () { return scope.perFrameEventQueue.length; };
+
   scope.pushVelocity = function(){
     // Update direction (in XZ plane)
     scope.playerVelocity.z = Number( moveBackward ) - Number( moveForward );
