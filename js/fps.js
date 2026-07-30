@@ -1290,12 +1290,6 @@ var drawC2P = function(){
   c2p.position.set(x, y, -distance);
 }
 
-/**
- * Produce a random sign (with equal probability)
- * @returns {-1 or +1}
- */
-var randSign = function() {return Math.random() < 0.5 ? -1 : 1};
-
 // Scene storage
 var scene, floor, world;      
 var leftWall, rightWall, frontWall, backWall;   // Add these directly to the "world" group so they have collision with shots
