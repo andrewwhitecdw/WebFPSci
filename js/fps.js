@@ -783,8 +783,6 @@ function updateTargets(dt) {
       var intersects = raycaster.intersectObjects(world.children);
       // Check if we are within a simulation step of the intersection
       if(intersects.length > 0 && intersects[0].distance <= (target.radius + dt * target.velocity.length())){  
-        var beforeVel = new THREE.Vector3();
-        beforeVel.copy(target.velocity); 
         target.velocity.reflect(intersects[0].face.normal);
         canChangeVelocity = false;
       }
