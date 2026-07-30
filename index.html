@@ -20,6 +20,7 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.-->
 
+<html>
 <head>
     <title>Web FPSci</title>
     <link rel="icon" href="assets/images/icon.png">
@@ -54,15 +55,16 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.-->
             </table>
         </div>
     </div>
+
+    <audio id="fireSound" src="assets/sounds/laser.wav"></audio>
+    <audio id="explodeSound" src="assets/sounds/explosion.wav"></audio>
+
+    <input id="configInput" type="file" style="visibility:hidden; position:absolute;"/>
 </body>
-
-<audio id="fireSound" src="assets/sounds/laser.wav"></audio>
-<audio id="explodeSound" src="assets/sounds/explosion.wav"></audio>
-
-<input id="configInput" type="file" style="visibility:hidden; position:absolute;"/>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r118/three.js"></script>
 <script src="https://mrdoob.github.io/stats.js/build/stats.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5/dat.gui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.meshline/1.3.0/THREE.MeshLine.js"></script>
 <script src="js/fps.js"></script>
+</html>
