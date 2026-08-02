@@ -10,3 +10,6 @@ def test_c2pvertpos_documented_as_number():
         r'Vertical position: `c2pVertPos` \((`[^`]+`)\) = `0\.5`', text
     )
     assert match, "c2pVertPos line not found or malformed"
+    assert match.group(1) == '`Number`', (
+        f"Expected Number type, got {match.group(1)}"
+    )
