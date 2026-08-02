@@ -14,9 +14,13 @@ def test_server_start_before_browser():
     assert browser_idx is not None, "missing browser open command"
     assert browser_idx > server_idx, "browser command must come after server start"
     middle = lines[server_idx + 1:browser_idx]
-    wait_pattern = re.compile(r"timeout|ping\s+-n|Start-Sleep|waitfor|powershell.*sleep", re.IGNORECASE)
-    assert any(wait_pattern.search(line) for line in middle), (
-        "expected a wait/delay between starting the server and opening the browser"
+    readiness_pattern = re.compile(
+        r"s\.connect|socket\.connect|Test-NetConnection|TcpClient|"
+        r"127\.0\.0\.1\s*[:',]\s*8000|localhost\s*[:',]\s*8000",
+        re.IGNORECASE,
+    )
+    assert any(readiness_pattern.search(line) for line in middle), (
+        "expected a readiness probe that verifies the server is accepting connections"
     )
 
 
